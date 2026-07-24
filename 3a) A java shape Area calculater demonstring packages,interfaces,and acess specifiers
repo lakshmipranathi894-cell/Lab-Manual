@@ -1,0 +1,19 @@
+class PiCalculator {
+    private double pi; // PRIVATE: Restricted access
+
+    protected void calculate() { // PROTECTED: Package/Subclass access
+        pi = Math.PI;
+    }
+
+    public double getPi() { // PUBLIC: Universal access
+        if (pi == 0) calculate();
+        return pi;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        PiCalculator p = new PiCalculator();
+        System.out.println("Pi value: " + p.getPi()); 
+    }
+}
