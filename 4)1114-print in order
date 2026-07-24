@@ -13,3 +13,9 @@ class Foo {
         printSecond.run();
         step = 3;
     }
+
+    public void third(Runnable printThird) throws InterruptedException {
+        while (step != 3);
+        printThird.run();
+    }
+}
